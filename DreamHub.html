@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+
+        body {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1300px;
+            
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+            align-items: center;
+            
+        }
+
+        .header__menus {
+            display: flex;
+            gap: 30px;
+            width: 100%;
+            justify-content: end;
+            margin-right: 30px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 25px;
+        }
+
+        .header__button {
+            color: white;
+            font-weight: 500;
+            background: #3abba7;
+            border-radius: 20px 0px 20px 0px;
+            width: 200px;
+            height: 50px;
+            font-size: large;
+            border: #3abba7;
+            cursor: pointer;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-family: 'Space Grotesk', sans-serif;
+            margin-top: 150px;
+        }
+
+        .hero__info {
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+            gap: 30px;
+
+        }
+
+        .hero__title{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            font-size: 30px;
+            margin-right: 10px;
+        }
+
+        .hero__description {
+            font-size: 17px;  
+            margin-right: 10px;     
+        }
+
+        .hero__actions {
+            display: flex;
+            gap: 20px;
+            color: white;
+        }
+
+        .hero__search {
+            height: 55px;
+            width: 350px;
+            font-size: large;
+            border-radius: 4px;
+            border-color: rgb(0, 0, 0);
+            padding-left: 10px;
+            background: #140d36;
+            color: white;
+        }
+
+
+
+        .hero__button {
+            width: 150px;
+            height: 55px;
+            background-color: #3abba7;
+            color: white;
+            font-size: 19px;
+            border: #3abba7;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .hero__img {
+            margin-left: 70px;
+        }
+
+        .image__hero__content {
+            max-width: 600px;
+            height: auto;
+            
+        }
+
+        .brands-sections {
+            display: flex;
+            flex-direction: row;
+            height: 30px;
+            gap: 50px;
+            margin-top: 150px;
+        }
+
+        .services {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-family: 'Space Grotesk', sans-serif;
+            margin-top: 100px;
+        }
+
+        .service__info {
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+            margin-right: 350px;
+            gap: 30px;
+        }
+
+        .service__title {
+            font-size: 27px;
+        }
+
+        .service__description {
+            font-size: 17px;
+        }
+
+        .service__button {
+            width: 150px;
+            height: 55px;
+            background-color: #3abba7;
+            color: white;
+            font-size: 15px;
+            border: #3abba7;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .services-items {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 1em;
+            margin-top: 50px;
+        }
+
+        .items {
+            background: #002f65;
+            padding: 23px;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .item-contents {
+            color: white;
+            margin-top: 10px;
+        }
+
+        .item-descriptions {
+            color: #57647c;
+            margin-top: 10px;
+        }
+
+        .item-buttons {
+            margin-top: 10px;
+            background-color: #002f65;
+            border: #002f65;
+            cursor: pointer;
+            color: white;
+        }
+
+        .about-services {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-family: 'Space Grotesk', sans-serif;
+            margin-top: 150px;
+            gap: 30px;
+        }
+
+        .image-about-services {
+            max-width: 600px;
+            height: 450px;           
+        }
+
+        .about-services-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .about-services-title {
+            font-size: 36px;
+            color: #140d36;
+        }
+
+        .about-services-description {
+            color: #57647c;
+            font-size: 17px;
+            
+        }
+
+        .about-services-checkbox {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 13px;
+            grid-gap: 10px;
+        }
+
+        .about-services-buttons {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .about-services-button1 {
+            width: 150px;
+            height: 55px;
+            background-color: #3abba7;
+            color: white;
+            font-size: 15px;
+            border: #3abba7;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+
+        .about-services-button2 {
+            width: 55px;
+            height: 55px;
+            background-color: #3abba7;
+            color: white;
+            font-size: 15px;
+            border: #3abba7;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="head-container">
+        <div class="header container">
+            <img class="logo" src="https://html.ditsolution.net/drtheme/dreamhub/cloud-solution/assets/images/logo.png" alt="">
+            <ul class="header__menus">
+                <li>Home</li>
+                <li>Pages</li>
+                <li>Services</li>
+                <li>Pricing</li>
+                <li>Blog</li>
+                <li>Contact</li>
+            </ul>
+            <button class="header__button">Get Started</button>
+        </div>
+    
+        <div class="hero container">
+    
+            <div class="hero__info">
+                <div class="hero__title">
+                    <h1>Advanced cloud stroage service for your work</h1>
+                </div>
+    
+                <div class="hero__description">
+                    <p>Payment solution magnetic value  Intrinsicly to enterprise-wide without cross functional information.</p>
+                </div>
+    
+                <div class="hero__actions">
+                    <input class="hero__search" type="Search Here" placeholder="Search Here">
+                    <button class="hero__button">Start Free Trial</button> 
+                </div>
+                          
+            </div>
+            
+            <div class="hero__img">
+                <img class="image__hero__content" src="https://html.ditsolution.net/drtheme/dreamhub/cloud-solution/assets/images/slider/hero.png" alt="">
+            </div>
+                
+        </div>
+    
+        <div class="brands-sections">
+            <img src="https://html.ditsolution.net/drtheme/dreamhub/cloud-solution/assets/images/resource/brand1.png" alt="">
+            <img src="https://html.ditsolution.net/drtheme/dreamhub/cloud-solution/assets/images/resource/brand2.png" alt="">
+            <img src="https://html.ditsolution.net/drtheme/dreamhub/cloud-solution/assets/images/resource/brand3.png" alt="">
+            <img src="https://html.ditsolution.net/drtheme/dreamhub/cloud-solution/assets/images/resource/brand4.png" alt="">
+            <img src="https://html.ditsolution.net/drtheme/dreamhub/cloud-solution/assets/images/resource/brand5.png" alt="">
+        </div>
+    
+        <div class="services container">
+    
+            <div class="service__info">
+    
+                <div class="service__title">
+                    <h2>A robust cloud solution built with intelligence</h2>
+                </div>
+    
+                <div class="service__description">
+                    <p>Expertise panebt solution predominate invested practices throuh solutions plug-and-play collaboration and idea-sharing.</p>   
+                </div> 
+    
+            </div>
+    
+            <div>
+                <button class="service__button">Browse Software</button>
+            </div>
+        </div>
+    
+        <div class="services-items container">
+            <div class="items">
+                <img src="https://html.ditsolution.net/drtheme/dreamhub/cloud-solution/assets/images/resource/srvc-icon1.png" alt="">
+                <h3 class="item-contents">Cloud Infrastructure</h3>
+                <p class="item-descriptions">Child Welfare Vestibulum eget mauris dui proin luctus est lacus, eu lobortis orci dignissim. Orcilagri.…</p>
+                <button class="item-buttons">Read more</button>
+            </div>
+            
+            <div class="items">
+                <img src="https://html.ditsolution.net/drtheme/dreamhub/cloud-solution/assets/images/resource/srvc-icon2.png" alt="">
+                <h3 class="item-contents">Fast Performance</h3>
+                <p class="item-descriptions">Child Welfare Vestibulum eget mauris dui proin luctus est lacus, eu lobortis orci dignissim. Orcilagri.…</p>
+                <button class="item-buttons">Read more</button>
+            </div>
+    
+            <div class="items">
+                <img src="https://html.ditsolution.net/drtheme/dreamhub/cloud-solution/assets/images/resource/srvc-icon3.png" alt="">
+                <h3 class="item-contents">Cloud Managment</h3>
+                <p class="item-descriptions">Child Welfare Vestibulum eget mauris dui proin luctus est lacus, eu lobortis orci dignissim. Orcilagri.…</p>
+                <button class="item-buttons">Read more</button>
+            </div>
+    
+            <div class="items">
+                <img src="https://html.ditsolution.net/drtheme/dreamhub/cloud-solution/assets/images/resource/srvc-icon4.png" alt="">
+                <h3 class="item-contents">Automatic Update</h3>
+                <p class="item-descriptions">Child Welfare Vestibulum eget mauris dui proin luctus est lacus, eu lobortis orci dignissim. Orcilagri.…</p>
+                <button class="item-buttons">Read more</button>
+            </div>
+    
+            <div class="items">
+                <img src="https://html.ditsolution.net/drtheme/dreamhub/cloud-solution/assets/images/resource/srvc-icon5.png" alt="">
+                <h3 class="item-contents">Code and Data Rollback</h3>
+                <p class="item-descriptions">Child Welfare Vestibulum eget mauris dui proin luctus est lacus, eu lobortis orci dignissim. Orcilagri.…</p>
+                <button class="item-buttons">Read more</button>
+            </div>
+    
+            <div class="items">
+                <img src="https://html.ditsolution.net/drtheme/dreamhub/cloud-solution/assets/images/resource/srvc-icon6.png" alt="">
+                <h3 class="item-contents">Strong & Security</h3>
+                <p class="item-descriptions">Child Welfare Vestibulum eget mauris dui proin luctus est lacus, eu lobortis orci dignissim. Orcilagri.…</p>
+                <button class="item-buttons">Read more</button>
+            </div>
+    
+        </div>
+    </div>
+
+
+    <div>
+
+        <div class="about-services container">
+            
+            <div>
+               <img class="image-about-services" src="https://html.ditsolution.net/drtheme/dreamhub/cloud-solution/assets/images/resource/about.png" alt="">
+            </div>
+
+            <div class="about-services-info">
+
+                <div>
+                    <h2 class="about-services-title">With mixland, you decide where you store your data</h2>
+                </div>
+
+                <div>
+                    <p class="about-services-description">Clean Bank is the future of banking where money can anywhere master payment and you can hold your own private keys money can paymenti and you can hold your own private keys payment.</p>   
+                </div>
+
+                <div class="about-services-checkbox">
+                    <input type="checkbox" name="Banking Community Cloud">
+                    <label for="Banking Community Cloud">Banking Community Cloud</label>
+
+                    <input type="checkbox" name="Control to access your data" id="">
+                    <label for="Control to access your data">Control to access your data</label>
+
+                    <input type="checkbox" name="Banking Community Cloud">
+                    <label for="Banking Community Cloud">Banking Community Cloud</label>
+
+                    <input type="checkbox" name="Control to access your data" id="">
+                    <label for="Control to access your data">Control to access your data</label>
+                    
+                    
+                </div>
+
+                <div class="about-services-buttons">
+                    <button class="about-services-button1">Get Started</button>
+                    <button class="about-services-button2"> > </button>
+                    <p class="about-services-button2-intro">Watch Intro</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr color="#3abba7;">
+        <div>
+            <div>
+                <div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
